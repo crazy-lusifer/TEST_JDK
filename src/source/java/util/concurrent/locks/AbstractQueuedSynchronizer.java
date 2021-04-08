@@ -794,7 +794,7 @@ public abstract class AbstractQueuedSynchronizer
      */
     private static boolean shouldParkAfterFailedAcquire(Node pred, Node node) {
         int ws = pred.waitStatus;
-        if (ws == Node.SIGNAL)
+        if (ws == Node.SIGNAL) // 如果前驱节点是 SIGNAL 状态，那么当前驱节点 release 时会通知自己，所以该节点可以 park
             /*
              * This node has already set status asking a release
              * to signal it, so it can safely park.

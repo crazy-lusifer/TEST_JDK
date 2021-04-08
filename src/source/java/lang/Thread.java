@@ -154,6 +154,7 @@ class Thread implements Runnable {
     private boolean     single_step;
 
     /* Whether or not the thread is a daemon thread. */
+    // 当 JVM 中不存在 daemon 的线程的时候，JVM 将自动退出，所有的 daemon 线程也将结束。
     private boolean     daemon = false;
 
     /* JVM state */
