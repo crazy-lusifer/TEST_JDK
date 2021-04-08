@@ -6,4 +6,7 @@ package p2;
  * @Mail: zhiqiangjiao@sohu-inc.com
  */
 public class test {
+    public static void main(String[] args) {
+        System.out.println("hello world!");
+    }
 }
